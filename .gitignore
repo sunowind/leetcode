@@ -24,3 +24,6 @@ hs_err_pid*
 
 src/main/java/com/shuzijun/leetcode/editor/cn/doc/solution/*.*
 src/main/java/com/shuzijun/leetcode/editor/cn/doc/submission/*.*
+
+#idea
+.idea/*
