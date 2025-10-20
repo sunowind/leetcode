@@ -30,3 +30,5 @@ src/main/java/com/shuzijun/leetcode/editor/cn/doc/submission/*.*
 *.iml
 .github/
 out/
+
+target/
