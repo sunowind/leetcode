@@ -1,0 +1,50 @@
+### 解题思路
+
+思维清晰得写出了屎山代码
+
+### 代码
+
+* java
+
+```java
+class Solution {
+    public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
+        Set<Integer> nums1Set = new HashSet<Integer>();
+        Set<Integer> nums2Set = new HashSet<Integer>();
+        for (int n : nums1) {
+            nums1Set.add(n);
+        }
+        for (int n : nums2) {
+            nums2Set.add(n);
+        }
+
+        Set<Integer> answerZeroSet = new HashSet<Integer>();
+        for (int n : nums1) {
+            if (!nums2Set.contains(n)) {
+                answerZeroSet.add(n);
+            }
+        }
+        Set<Integer> answerOneSet = new HashSet<Integer>();
+        for (int n : nums2) {
+            if (!nums1Set.contains(n)) {
+                answerOneSet.add(n);
+            }
+        }
+
+        List<Integer> answerZeroList = new ArrayList<Integer>();
+        List<Integer> answerOneList = new ArrayList<Integer>();
+        for (Integer n : answerZeroSet) {
+            answerZeroList.add(n);
+        }
+        for (Integer n : answerOneSet) {
+            answerOneList.add(n);
+        }
+
+        List<List<Integer>> ans = new ArrayList<List<Integer>>();
+        ans.add(answerZeroList);
+        ans.add(answerOneList);
+        return ans;
+    }
+}
+```
+
